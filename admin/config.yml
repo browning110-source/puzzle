@@ -1,1 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main
+  
+media_folder: "assets"
+public_folder: "/assets"
 
+collections:
+  - name: "urunler"
+    label: "Ürünler"
+    folder: "urunler"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Başlık", name: "title", widget: "string"}
+      - {label: "Fiyat", name: "price", widget: "string"}
+      - {label: "Görsel", name: "image", widget: "image"}
